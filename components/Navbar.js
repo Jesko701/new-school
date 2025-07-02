@@ -1,73 +1,67 @@
-"use client";
-
-import Link from "next/link";
-import Image from "next/image";
-import { FaTwitter, FaInstagram  } from "react-icons/fa";
-import { AiOutlineTikTok } from "react-icons/ai";
-import { usePathname } from "next/navigation";
 import { navLinks } from "../constant/navLinks";
+import { FaInstagram, FaTwitter, FaTiktok   } from "react-icons/fa";
 
 export default function Navbar() {
-  const pathname = usePathname();
-  if (!pathname) return null;
-
   return (
-    <header className="w-full bg-white shadow-md">
+    <header className="w-full bg-white shadow-md font-inter">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        {/* Logo */}
-        <Link href="/">
+        {/* Logo - Using standard <a> tag for server component compatibility */}
+        <a href="/">
           <div className="flex items-center gap-2">
             <span className="text-xl font-bold text-gray-800">MySite</span>
           </div>
-        </Link>
+        </a>
 
-        {/* Navigation */}
+        {/* Navigation - Using standard <a> tags for server component compatibility */}
         <nav className="hidden md:flex gap-6 text-red-500 font-medium">
           {navLinks.map((link) => {
-            const isActive = pathname === link.href;
-
+            // Note: Active link highlighting (e.g., using usePathname) is not
+            // possible directly in a Server Component. If needed, this part
+            // would typically be a separate Client Component.
             return (
-              <Link
+              <a
                 key={link.href}
                 href={link.href}
-                className={`relative transition text-gray-700 hover:text-red-300 
-                  after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full 
-                  after:scale-x-0 hover:after:scale-x-100 after:origin-left after:transition-transform 
-                  after:bg-red-300 ${
-                    isActive
-                      ? "text-blue-600 after:scale-x-100"
-                      : "after:scale-x-0"
-                  }
+                className={`relative transition text-gray-700 hover:text-red-300
+                  after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full
+                  after:scale-x-0 hover:after:scale-x-100 after:origin-left after:transition-transform
+                  after:bg-red-300
                 `}
               >
                 {link.label}
-              </Link>
+              </a>
             );
           })}
         </nav>
 
-        {/* Social Media */}
+        {/* Social Media - Using standard <a> tags and inline SVGs for server component compatibility */}
         <div className="flex gap-4 text-gray-600 text-xl">
           <a
             href="https://tiktok.com"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="TikTok"
+            className="hover:text-gray-800 transition-colors"
           >
-            <AiOutlineTikTok />
+            <FaTiktok/>
           </a>
           <a
             href="https://twitter.com"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Twitter"
+            className="hover:text-gray-800 transition-colors"
           >
-            <FaTwitter />
+            <FaTwitter/>
           </a>
           <a
             href="https://instagram.com"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Instagram"
+            className="hover:text-gray-800 transition-colors"
           >
-            <FaInstagram />
+            <FaInstagram/>
           </a>
         </div>
       </div>

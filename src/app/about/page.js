@@ -1,8 +1,4 @@
-import { Description } from "./components/Description";
-import { EndSection } from "./components/EndSection";
-import { QuoteSection } from "./components/QuoteSection";
-import { StatsSection } from "./components/StatsSection";
-import { Targets } from "./components/Targets";
+import { Description, EndSection, QuoteSection, StatsSection, Targets } from "./components";
 export default function about() {
   return (
     <div className="flex flex-col items-center bg-white">
@@ -13,7 +9,6 @@ export default function about() {
       <QuoteSection />
       <StatsSection />
       <Targets />
-      <EndSection />
     </div>
   );
 }
