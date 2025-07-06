@@ -1,6 +1,8 @@
+"use client"
 import { AnimatedNumber } from "./animation/AnimatedNumber";
 
 const Description = () => {
+
   return (
     <section className="container mx-auto px-4 py-16 md:py-24">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 lg:gap-x-24">
@@ -29,7 +31,7 @@ const Description = () => {
             magnam pariatur obcaecati!
           </p>
           <a
-            href="#"
+            href={window.location.origin + "/about"}
             className="text-orange-600 hover:text-orange-800 font-semibold text-lg inline-block border-b border-orange-600 hover:border-orange-800 pb-1 transition-colors duration-200"
           >
             Know More About Us
