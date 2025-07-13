@@ -31,7 +31,7 @@ const Description = () => {
             magnam pariatur obcaecati!
           </p>
           <a
-            href={window.location.origin + "/about"}
+            href='/about'
             className="text-orange-600 hover:text-orange-800 font-semibold text-lg inline-block border-b border-orange-600 hover:border-orange-800 pb-1 transition-colors duration-200"
           >
             Know More About Us
