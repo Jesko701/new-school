@@ -1,6 +1,6 @@
 // components/Navbar.jsx
 import { navLinks } from "../constant/navLinks";
-import { FaInstagram, FaTwitter, FaTiktok } from "react-icons/fa";
+import { Facebook, Twitter,Instagram   } from "lucide-react";
 
 export default function Navbar() {
   return (
@@ -46,7 +46,7 @@ export default function Navbar() {
             aria-label="TikTok"
             className="hover:text-gray-800 transition-colors"
           >
-            <FaTiktok />
+            <Twitter />
           </a>
           <a
             href="https://twitter.com"
@@ -55,7 +55,7 @@ export default function Navbar() {
             aria-label="Twitter"
             className="hover:text-gray-800 transition-colors"
           >
-            <FaTwitter />
+            <Facebook />
           </a>
           <a
             href="https://instagram.com"
@@ -64,7 +64,7 @@ export default function Navbar() {
             aria-label="Instagram"
             className="hover:text-gray-800 transition-colors"
           >
-            <FaInstagram />
+            <Instagram />
           </a>
         </div>
       </div>

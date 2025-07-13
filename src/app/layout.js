@@ -6,7 +6,7 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import { useState } from "react";
 import { MobileMenu } from "../../components/mobile";
-import { FiMenu } from "react-icons/fi";
+import { Menu } from 'lucide-react';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -46,7 +46,7 @@ export default function RootLayout({ children }) {
             "
             aria-label="Toggle mobile menu"
           >
-            <FiMenu className="w-6 h-6" />
+            <Menu className="w-6 h-6" />
           </button>
 
           {/* Overlay for when the mobile menu is open */}

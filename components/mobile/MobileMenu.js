@@ -1,6 +1,6 @@
 "use client";
 
-import { FiX } from "react-icons/fi";
+import { Plus } from "lucide-react";
 import { navLinks } from "../../constant/navLinks"; // Adjust path as needed
 
 export function MobileMenu({ isOpen, toggleMenu }) {
@@ -19,7 +19,7 @@ export function MobileMenu({ isOpen, toggleMenu }) {
           aria-label="Close mobile menu"
           className="absolute top-6 right-6 text-gray-700 text-2xl focus:outline-none "
         >
-          <FiX className="hover:scale-120 text-red-600" />
+          <Plus className="hover:scale-120 text-red-600 rotate-45" />
         </button>
 
         <h2 className="text-xl font-semibold text-gray-800 mb-6">Navigation</h2>

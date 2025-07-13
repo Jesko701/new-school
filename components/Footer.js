@@ -1,5 +1,5 @@
 import { navLinks } from "../constant/navLinks";
-import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
+import { Facebook, Twitter,Instagram   } from "lucide-react";
 
 const AboutUsFooter = () => (
   <div className="w-full md:w-1/3 text-center md:text-left mb-6 md:mb-0">
@@ -15,19 +15,19 @@ const AboutUsFooter = () => (
         href="#"
         className="hover:text-red-300 transition-all duration-150 hover:scale-150"
       >
-        <FaFacebookF />
+        <Facebook />
       </a>
       <a
         href="#"
         className="hover:text-red-300 transition-all duration-150 hover:scale-150"
       >
-        <FaTwitter />
+        <Twitter />
       </a>
       <a
         href="#"
         className="hover:text-red-300 transition-all duration-150  hover:scale-150"
       >
-        <FaInstagram />
+        <Instagram />
       </a>
     </div>
   </div>
